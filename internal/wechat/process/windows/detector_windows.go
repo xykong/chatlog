@@ -25,7 +25,17 @@ func initializeProcessInfo(p *process.Process, info *model.Process) error {
 
 	for _, f := range files {
 		if strings.HasSuffix(f.Path, dbPath) {
-			filePath := f.Path[4:] // 移除 "\\?\" 前缀
+			// 处理 Windows 路径前缀
+			filePath := f.Path
+			if strings.HasPrefix(filePath, `\\?\`) {
+				filePath = filePath[4:] // 移除 "\\?\" 前缀
+				// 处理扩展长度 UNC 路径: \\?\UNC\server\share → \\server\share
+				if strings.HasPrefix(filePath, `UNC\`) {
+					filePath = `\\` + filePath[4:]
+				}
+			}
+			// 标准 UNC 路径 (\\server\share) 和普通路径保持不变
+
 			parts := strings.Split(filePath, string(filepath.Separator))
 			if len(parts) < 4 {
 				log.Debug().Msg("无效的文件路径: " + filePath)
