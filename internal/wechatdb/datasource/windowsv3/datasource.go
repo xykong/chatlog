@@ -13,10 +13,10 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/rs/zerolog/log"
 
-	"github.com/sjzar/chatlog/internal/errors"
-	"github.com/sjzar/chatlog/internal/model"
-	"github.com/sjzar/chatlog/internal/wechatdb/datasource/dbm"
-	"github.com/sjzar/chatlog/pkg/util"
+	"github.com/xykong/chatlog/internal/errors"
+	"github.com/xykong/chatlog/internal/model"
+	"github.com/xykong/chatlog/internal/wechatdb/datasource/dbm"
+	"github.com/xykong/chatlog/pkg/util"
 )
 
 const (

@@ -7,8 +7,8 @@ import (
 
 	"github.com/rs/zerolog/log"
 
-	"github.com/sjzar/chatlog/internal/errors"
-	"github.com/sjzar/chatlog/internal/model"
+	"github.com/xykong/chatlog/internal/errors"
+	"github.com/xykong/chatlog/internal/model"
 )
 
 // initContactCache 初始化联系人缓存

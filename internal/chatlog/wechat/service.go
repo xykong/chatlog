@@ -11,11 +11,11 @@ import (
 	"github.com/fsnotify/fsnotify"
 	"github.com/rs/zerolog/log"
 
-	"github.com/sjzar/chatlog/internal/errors"
-	"github.com/sjzar/chatlog/internal/wechat"
-	"github.com/sjzar/chatlog/internal/wechat/decrypt"
-	"github.com/sjzar/chatlog/pkg/filemonitor"
-	"github.com/sjzar/chatlog/pkg/util"
+	"github.com/xykong/chatlog/internal/errors"
+	"github.com/xykong/chatlog/internal/wechat"
+	"github.com/xykong/chatlog/internal/wechat/decrypt"
+	"github.com/xykong/chatlog/pkg/filemonitor"
+	"github.com/xykong/chatlog/pkg/util"
 )
 
 var (
